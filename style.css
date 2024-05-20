@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Dubai;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+.heading {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 5vh;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card {
+  width: 320px;
+  margin-top: 5vh;
+  min-height: 150px;
+  background-image: linear-gradient(to bottom right, #989898, #fff);
+  border-radius: 20px;
+}
+.todo-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #a9aace, #c3c4ff);
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 5px solid #c5957b;
+}
+.todo-add input {
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(to right, #c5957b, #9c897e);
+}
+.todo-add button {
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.todo-add button i {
+  font-size: 35px;
+  border-radius: 100%;
+  background-image: linear-gradient(to bottom left, #c990ab, #333481);
+  color: #fff;
+}
+.todo-add button:hover {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+.todo-content ul {
+  float: left;
+}
+.todo-content ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 5px 2px 50px;
+  user-select: none;
+  cursor: pointer;
+  float: left;
+  width: 250px;
+  word-wrap: break-word;
+  text-align: start;
+  position: relative;
+}
+.todo-content ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 16px;
+  left: 20px;
+}
+.clicked {
+  color: #0a090865;
+  text-decoration: line-through;
+}
+.clicked::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(images/checked.png);
+  background-size: cover;
+  background-position: center;
+  top: 16px;
+  left: 20px;
+}
+.todo-content ul li span {
+  position: absolute;
+  right: -60px;
+  top: 5px;
+  float: right;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50px;
+  background-image: linear-gradient(to bottom left, #c990ab, #333481);
+  color: #fff;
+}
+.todo-content ul li span:hover {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
